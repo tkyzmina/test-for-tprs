@@ -6,6 +6,7 @@
   background-color: $color-default-white;
 
   @include viewport--md {
+    min-height: 48px;
     padding-left: 15px;
     padding-right: 8px;
   }

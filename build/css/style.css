@@ -535,6 +535,7 @@ button,
   background-color: #ffffff; }
   @media (max-width: 799px) {
     .header {
+      min-height: 48px;
       padding-left: 15px;
       padding-right: 8px; } }
   .header__wrapper {
@@ -1136,6 +1137,9 @@ button,
   width: 30px;
   height: 3px;
   background-color: #004685; }
+  @media (max-width: 799px) {
+    .hamburger__line, .hamburger__line::before, .hamburger__line::after {
+      width: 23px; } }
 
 .hamburger {
   padding: 0;
@@ -1160,9 +1164,15 @@ button,
     .hamburger__line::before {
       top: -10px;
       left: 0; }
+      @media (max-width: 799px) {
+        .hamburger__line::before {
+          top: -7px; } }
     .hamburger__line::after {
       top: 10px;
       left: 0; }
+      @media (max-width: 799px) {
+        .hamburger__line::after {
+          top: 7px; } }
   .hamburger--active .hamburger__line {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);

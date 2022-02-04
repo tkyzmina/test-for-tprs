@@ -42,6 +42,10 @@
   width: 30px;
   height: 3px;
   background-color: $color-blue;
+
+  @include viewport--md {
+    width: 23px;
+  }
 }
 
 .hamburger {
@@ -63,12 +67,20 @@
       @extend %hamburger-line;
       top: -10px;
       left: 0;
+
+      @include viewport--md {
+        top: -7px;
+      }
     }
 
     &::after {
       @extend %hamburger-line;
       top: 10px;
       left: 0;
+
+      @include viewport--md {
+        top: 7px;
+      }
     }
   }
 
