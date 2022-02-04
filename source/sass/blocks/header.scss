@@ -1,19 +1,34 @@
 .header {
   display: flex;
   align-items: center;
-  min-height: 100px;
-  padding: 0 40px;
+  min-height: 68px;
+  padding: 0 24px;
+  background-color: $color-default-white;
 
-  background-color: $color-blue;
+  @include viewport--md {
+    padding-left: 15px;
+    padding-right: 8px;
+  }
 
   &__wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
-  a,
-  p {
-    // color: $color-white;
+  &__logo {
+    @include viewport--md {
+      width: 195px;
+      height: 30px;
+      order: 1;
+    }
+  }
+
+  .hamburger {
+    @include viewport--md {
+      order: 2;
+    }
   }
 
   ul {
@@ -30,7 +45,7 @@
     }
   }
 
-  .main-nav__toggle {
+  .main-nav {
     display: none;
   }
 }

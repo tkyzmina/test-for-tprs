@@ -1,0 +1,90 @@
+.btn {
+  display: flex;
+  padding: 14px 32px 13px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: $color-default-white;
+  border: none;
+  border-radius: 8px;
+  background-color: $color-red;
+  transition: background-color $default-transition-settings;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-red2;
+  }
+
+  &:active {
+    background-color: $color-red;
+  }
+
+  &__icon {
+    @include reset-btn;
+
+    @include viewport--md {
+      display: none;
+    }
+
+    svg {
+      fill: $color-blue;
+      stroke: $color-blue;
+    }
+  }
+}
+
+%hamburger-line {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: $color-blue;
+}
+
+.hamburger {
+  @include reset-btn;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  padding: 13px 9px 12px;
+
+
+  &__line {
+    @extend %hamburger-line;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform $default-transition-settings;
+
+    &::before {
+      @extend %hamburger-line;
+      top: -10px;
+      left: 0;
+    }
+
+    &::after {
+      @extend %hamburger-line;
+      top: 10px;
+      left: 0;
+    }
+  }
+
+  &--active {
+    .hamburger__line {
+      transform: rotate(45deg);
+      left: 10px;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        top: 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
