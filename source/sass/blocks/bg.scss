@@ -1,0 +1,88 @@
+.bg {
+  padding-bottom: 112px;
+  background-color: $color-blue-bg;
+  background-image: url(../../img/bg/bg@1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  &__wrapper {
+    padding-top: 89px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    color: $color-default-white;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+}
+
+.form {
+  display: flex;
+  margin-bottom: 12px;
+
+  &__label {
+    flex-grow: 2;
+    margin-right: 17px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 20px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: $color-default-white;
+    outline: none;
+
+    &::placeholder {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: $color-grey;
+      transition: color $default-transition-settings;
+    }
+
+    &:focus {
+      &::placeholder {
+        color: lighten($color-grey, $amount: 20%)
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  padding: 14px 32px 13px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: $color-default-white;
+  border: none;
+  border-radius: 8px;
+  background-color: $color-red;
+  transition: background-color $default-transition-settings;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-red2;
+  }
+
+  &:active {
+    background-color: $color-red;
+  }
+}

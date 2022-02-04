@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>ProjectName — Главная</title>
+
+</head>
+
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+    @@include("source/html/base/header.html", {
+    "main": true
+    })
+
+    <main>
+      <section class="bg">
+        <div class="container">
+          <div class="bg__wrapper">
+            <h1 class="bg__title">Поиск начислений</h1>
+            <form class="bg__form form" action="#">
+              <label class="form__label">
+                <input class="form__input" type="search" name="search" placeholder="Введите данные для поиска">
+              </label>
+              <button class="form__btn btn" type="button">Найти</button>
+            </form>
+            <span class="bg__text">Чем больше параметров введено, тем полнее результаты поиска</span>
+          </div>
+        </div>
+      </section>
+      <div class="containe r">
+        <section class="features">
+          <h2 class="features__title"><span>Здесь можно оплатить</span><span>Узнайте, как оплатить</span></h2>
+          <ul class="features__list">
+            <li class="features__item">
+              <a href="#" class="features__link">Штрафы&nbsp;ГИБДД</a>
+            </li>
+            <li class="features__item">
+              <a href="#" class="features__link">Судебные&nbsp;задолженности</a>
+            </li>
+            <li class="features__item">
+              <a href="#" class="features__link">Налоги</a>
+            </li>
+            <li class="features__item">
+              <a href="#" class="features__link">Услуги&nbsp;Росреестра</a>
+            </li>
+            <li class="features__item">
+              <span class="features__item-text">и&nbsp;другие&nbsp;услуги</span>
+            </li>
+          </ul>
+          <div class="card accordion">
+            <button class="card__accordion" type="button">
+              <svg width="44" heigt="44" viewBox="0 0 44 44" role="img">
+                <use xlink:href="#icon-gibdd"></use>
+              </svg>
+              <span>Штрафы ГИБДД</span>
+              <svg class="accordion__arrow" width="14" heigt="14" viewBox="0 0 14 14">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="card__wrapper container">
+              <div class="card__content">
+                <h3 class="card__title">Штрафы ГИБДД</h3>
+                <p class="card__text">Для поиска укажите номера водительского удостоверения и&nbsp;свидетельства
+                  о&nbsp;регистрации&nbsp;ТС или номер штрафа.</p>
+                <p class="card__text">Если у&nbsp;вас есть на&nbsp;руках постановление
+                  о&nbsp;штрафе, вы&nbsp;можете указать реквизиты самостоятельно.</p>
+                <b class="card__highlighted">ПЛАТИТЬ ВОВРЕМЯ&nbsp;&mdash; ДЕШЕВЛЕ!</b>
+                <p class="card__text">В&nbsp;первые 20&nbsp;дней после выдачи постановления штраф можно оплатить
+                  со&nbsp;скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в&nbsp;Личном кабинете.
+                </p>
+              </div>
+              <div class="card__img-wrapper">
+                <div class="card__img">
+                  <img src="../img/content/pic_block1.png" srcset="../img/content/pic_block1@2x.png 2x"
+                    alt="Изображение полицейского" width="320" height="320">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card--left accordion">
+            <button class="card__accordion" type="button">
+              <svg width="44" heigt="44" viewBox="0 0 44 44" role="img">
+                <use xlink:href="#icon_fssp"></use>
+              </svg>
+              <span>Судебные задолженности</span>
+              <svg class="accordion__arrow" width="14" heigt="14" viewBox="0 0 14 14">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="card__wrapper container">
+              <div class="card__content">
+                <h3 class="card__title">Судебные задолженности</h3>
+                <p class="card__text">Для поиска начислений в&nbsp;ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или
+                  номер Исполнительного производства.</p>
+                <p class="card__text">Вы&nbsp;можете указать реквизиты платежа самостоятельно, заполнив форму..</p>
+                <b class="card__highlighted">УДОБНО!</b>
+                <p class="card__text">Судебные задолженности можно погасить как сразу, так и&nbsp;по&nbsp;частям,
+                  комфортными для вас платежами. Информацию о&nbsp;совершенных платежах сохраняйте в&nbsp;Личном
+                  кабинете.</p>
+              </div>
+              <div class="card__img-wrapper">
+                <div class="card__img">
+                  <img src="../img/content/pic_block2.png" srcset="../img/content/pic_block2@2x.png 2x"
+                    alt="Изображение молотка" width="320" height="320">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card accordion">
+            <button class="card__accordion" type="button">
+              <svg width="44" heigt="44" viewBox="0 0 44 44" role="img">
+                <use xlink:href="#icon_nalog"></use>
+              </svg>
+              <span>Налоги</span>
+              <svg class="accordion__arrow" width="14" heigt="14" viewBox="0 0 14 14">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="card__wrapper container">
+              <div class="card__content">
+                <h3 class="card__title">Налоги</h3>
+                <p class="card__text">Для поиска начислений по&nbsp;налогам в&nbsp;ГИС ГМП укажите ИНН или Индекс
+                  налогового документа, если у&nbsp;вас на&nbsp;руках есть квитанция.</p>
+                <b class="card__highlighted">ВАЖНО!</b>
+                <p class="card__text">Согласно законодательству&nbsp;РФ вы&nbsp;не&nbsp;можете оплачивать налоги
+                  за&nbsp;других физических лиц. Принимаются только платежи физических лиц.</p>
+              </div>
+              <div class="card__img-wrapper">
+                <div class="card__img">
+                  <img src="../img/content/pic_block3.png" srcset="../img/content/pic_block3@2x.png 2x"
+                    alt="Изображение налогового кодекса" width="320" height="320">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card--left accordion">
+            <button class="card__accordion" type="button">
+              <svg width="44" heigt="44" viewBox="0 0 44 44" role="img">
+                <use xlink:href="#icon_rr"></use>
+              </svg>
+              <span>Услуги Росреестра</span>
+              <svg class="accordion__arrow" width="14" heigt="14" viewBox="0 0 14 14">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="card__wrapper container">
+              <div class="card__content">
+                <h3 class="card__title">Услуги Росреестра</h3>
+                <p class="card__text">В&nbsp;поисковой строке укажите Код платежа, который был отправлен вам
+                  на&nbsp;почтовый ящик, указанный при подаче запроса в&nbsp;Росреестре.</p>
+                <b class="card__highlighted">НЕТ КОДА?</b>
+                <p class="card__text">Если у&nbsp;вас ещё нет кода платежа, перейдите на&nbsp;сайт <a class="card__link"
+                    href="#" target="_blank" rel="noopener noreferrer">rosreestr.ru</a> и&nbsp;сформируйте запрос
+                  на&nbsp;оплату электронных
+                  услуг Росреестра.</p>
+              </div>
+              <div class=" card__img-wrapper">
+                <div class="card__img">
+                  <img src="../img/content/pic_block4.png" srcset="../img/content/pic_block4@2x.png 2x"
+                    alt="Изображение строителя" width="320" height="320">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="partners container">
+          <h2 class="partners__title">С нами работают</h2>
+          <ul class="partners__list">
+            <li class="partners__item">
+              <div class="partners__logo-wrapper">
+                <div class="partners__logo">
+                  <img class="partners__img" src="../img/content/logo_partner1.svg" alt="Логотип партнера">
+                </div>
+              </div>
+              <p class="partners__name">Партнёр 1</p>
+            </li>
+            <li class="partners__item">
+              <div class="partners__logo-wrapper">
+                <div class="partners__logo">
+                  <img class="partners__img" src="../img/content/logo_partner2.svg" alt="Логотип партнера">
+                </div>
+              </div>
+              <p class="partners__name">Компания-партнер с&nbsp;длинным названием</p>
+            </li>
+            <li class="partners__item">
+              <div class="partners__logo-wrapper">
+                <div class="partners__logo">
+                  <img class="partners__img" src="../img/content/logo_partner3.svg" alt="Логотип партнера">
+                </div>
+              </div>
+              <p class="partners__name">Партнёр 3</p>
+            </li>
+            <li class="partners__item">
+              <div class="partners__logo-wrapper">
+                <div class="partners__logo">
+                  <img class="partners__img" src="../img/content/logo_partner4.svg" alt="Логотип партнера">
+                </div>
+              </div>
+              <p class="partners__name">Название партнёра 4</p>
+            </li>
+            <li class="partners__item">
+              <div class="partners__logo-wrapper">
+                <div class="partners__logo">
+                  <img class="partners__img" src="../img/content/logo_partner5.svg" alt="Логотип партнера">
+                </div>
+              </div>
+              <p class="partners__name">Компания-партнёра 5</p>
+            </li>
+            <li class="partners__item">
+              <div class="partners__logo-wrapper">
+                <div class="partners__logo">
+                  <img class="partners__img" src="../img/content/logo_partner6.svg" alt="Логотип партнера">
+                </div>
+              </div>
+              <p class="partners__name">Партнер&nbsp;6 с длинным названием</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <!-- <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-modal="success">modal--success link</a></p> -->
+    @@include("source/html/base/footer.html")
+
+    @@include("source/html/base/modal.html", {
+    "name": "feedback"
+    })
+
+    @@include("source/html/base/modal.html", {
+    "name": "success",
+    "fitContent": true,
+    "noScale": true,
+    "mod": "some-mod"
+    })
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

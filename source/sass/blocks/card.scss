@@ -1,0 +1,187 @@
+.card {
+  border-bottom: 1px solid $color-light-blue;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  @include viewport--md {
+    &:last-of-type {
+      border-bottom: 1px solid $color-light-blue;
+    }
+
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+    padding-top: 60px;
+    padding-bottom: 58px;
+    transition: max-height $default-transition-settings;
+
+    @include viewport--md {
+      max-height: 0;
+      overflow: hidden;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__content {
+    @include viewport--md {
+      padding-top: 7px;
+    }
+  }
+
+  &--left {
+    .card__img-wrapper {
+      order: 1;
+    }
+
+    .card__content {
+      order: 2;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+
+    @include viewport--md {
+      display: none;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 12px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    // @include viewport--md {
+    //   &:last-of-type {
+    //     margin-bottom: 12px;
+    //   }
+    // }
+  }
+
+  &__highlighted {
+    display: flex;
+    padding-top: 23px;
+    text-transform: uppercase;
+    color: $color-red;
+
+    @include viewport--md {
+      padding-top: 10px;
+    }
+  }
+
+  &__link {
+    color: $color-blue;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: lighten($color: $color-blue, $amount: 20%);
+    }
+  }
+
+  &__img-wrapper {
+    flex-shrink: 0;
+    width: 320px;
+
+    @media (max-width: 1200px) {
+      flex-shrink: 1;
+      min-width: 200px;
+    }
+
+    @include viewport--md {
+      display: none;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    position: relative;
+    padding-bottom: percentage(320/320);
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__accordion {
+    display: none;
+
+    @include viewport--md {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      padding: 6px 14px;
+      padding-right: 16px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      border: none;
+      background-color: $color-default-white;
+      color: $color-blue;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        span {
+          color: $color-blue-hv;
+          border-color: $color-blue-hv;
+        }
+
+        svg {
+          fill: $color-blue-hv;
+        }
+      }
+
+      &:active {
+        span {
+          color: $color-blue;
+          border-color: $color-blue;
+        }
+
+        svg {
+          fill: $color-blue;
+        }
+      }
+
+      span {
+        border-bottom: 1px dashed $color-blue;
+        transition: color $default-transition-settings, border-color $default-transition-settings;
+      }
+
+      svg {
+        fill: $color-blue;
+        transition: fill $default-transition-settings, transform $default-transition-settings;
+
+        &:last-of-type {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .card__accordion.active>.accordion__arrow {
+    transform: rotate(180deg);
+  }
+}

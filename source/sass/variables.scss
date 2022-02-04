@@ -1,0 +1,50 @@
+// Colors
+// Default
+
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
+
+// Base
+
+$color-blue: #004685;
+$color-blue-bg: #4888c1; //for bg hero
+$color-blue-hv: #569ddc; //for bg hero
+$color-light-blue: #ccdae7; //some lines
+$color-blue2: #8aaac7; //underline dotted
+$color-red: #d30531;
+$color-red2: #E1133F;
+$color-grey: #a6a6a6;
+
+
+// Gradient
+
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+//---------------------------------
+
+$font-family--main: "Open Sans",
+"Arial",
+sans-serif;
+
+// Animation
+//---------------------------------
+
+$default-transition-settings: 0.3s ease;
+$modal-transition-settings: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+// Viewports
+//---------------------------------
+
+$viewport--sm: 360px;
+$viewport--md: 360px;
+$viewport--lg: 800px;
+$viewport--xl: 1440px;
+$viewport--xxl: 1920px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
