@@ -574,7 +574,8 @@ button,
             -ms-flex-direction: column;
                 flex-direction: column;
         gap: 17px;
-        padding: 20px; } }
+        padding: 20px;
+        padding-top: 13px; } }
   .footer__copyright {
     padding-top: 8px; }
     @media (max-width: 799px) {
@@ -1016,6 +1017,10 @@ button,
 
 .partners {
   margin-bottom: 50px; }
+  @media (max-width: 799px) {
+    .partners {
+      margin-bottom: 43px;
+      padding-top: 25px; } }
   .partners__title {
     margin: 0;
     margin-bottom: 13px;
@@ -1029,6 +1034,9 @@ button,
       .partners__title {
         font-size: 20px;
         line-height: 27px; } }
+    @media (max-width: 799px) {
+      .partners__title {
+        margin-bottom: 16px; } }
   .partners__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1041,9 +1049,8 @@ button,
     list-style: none; }
     @media (max-width: 799px) {
       .partners__list {
-        -webkit-column-gap: 16px;
-           -moz-column-gap: 16px;
-                column-gap: 16px; } }
+        gap: 16px;
+        row-gap: 0; } }
   .partners__item {
     width: calc(100% / 6);
     min-width: 148px;
@@ -1056,7 +1063,8 @@ button,
                 justify-content: space-between; } }
     @media (max-width: 799px) {
       .partners__item {
-        width: calc(100% / 2 - 8px); } }
+        width: calc(100% / 2 - 8px);
+        padding-bottom: 0; } }
     @media (max-width: 359px) {
       .partners__item {
         width: 100%; } }
@@ -1064,6 +1072,9 @@ button,
     width: 115px;
     margin: 0 auto;
     margin-bottom: 8px; }
+    @media (max-width: 799px) {
+      .partners__logo-wrapper {
+        margin-bottom: 0; } }
   .partners__logo {
     width: 100%;
     position: relative;
