@@ -9,7 +9,6 @@
     &:last-of-type {
       border-bottom: 1px solid $color-light-blue;
     }
-
   }
 
   &__wrapper {
@@ -21,16 +20,19 @@
 
     @include viewport--md {
       max-height: 0;
-      overflow: hidden;
       padding-top: 0;
       padding-bottom: 0;
+      overflow: hidden;
     }
   }
 
   &__content {
     @include viewport--md {
-      padding-top: 7px;
+      height: 100%;
+      padding-top: 12px;
+      padding-bottom: 20px;
     }
+
   }
 
   &--left {
@@ -62,6 +64,7 @@
 
     &:last-of-type {
       margin-bottom: 0;
+      position: relative;
     }
 
     // @include viewport--md {
@@ -168,9 +171,11 @@
       span {
         border-bottom: 1px dashed $color-blue;
         transition: color $default-transition-settings, border-color $default-transition-settings;
+        text-align: left;
       }
 
       svg {
+        flex-shrink: 0;
         fill: $color-blue;
         transition: fill $default-transition-settings, transform $default-transition-settings;
 

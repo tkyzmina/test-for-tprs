@@ -890,12 +890,14 @@ button,
     @media (max-width: 799px) {
       .card__wrapper {
         max-height: 0;
-        overflow: hidden;
         padding-top: 0;
-        padding-bottom: 0; } }
+        padding-bottom: 0;
+        overflow: hidden; } }
   @media (max-width: 799px) {
     .card__content {
-      padding-top: 7px; } }
+      height: 100%;
+      padding-top: 12px;
+      padding-bottom: 20px; } }
   .card--left .card__img-wrapper {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -918,7 +920,8 @@ button,
     margin: 0;
     margin-bottom: 12px; }
     .card__text:last-of-type {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      position: relative; }
   .card__highlighted {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -995,8 +998,11 @@ button,
         .card__accordion span {
           border-bottom: 1px dashed #004685;
           -webkit-transition: color 0.3s ease, border-color 0.3s ease;
-          transition: color 0.3s ease, border-color 0.3s ease; }
+          transition: color 0.3s ease, border-color 0.3s ease;
+          text-align: left; }
         .card__accordion svg {
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
           fill: #004685;
           -webkit-transition: fill 0.3s ease, -webkit-transform 0.3s ease;
           transition: fill 0.3s ease, -webkit-transform 0.3s ease;

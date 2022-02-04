@@ -8,6 +8,9 @@ const initAccordion = () => {
       btn.addEventListener("click", (evt) => {
         evt.preventDefault();
         const maxHeight = content.style.maxHeight;
+        console.log(evt);
+        console.log(content.clientHeight);
+        console.log(content.scrollHeight);
         if (maxHeight) {
           content.style.maxHeight = null;
           btn.classList.remove("active");
