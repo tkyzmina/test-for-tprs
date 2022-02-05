@@ -1,12 +1,15 @@
 <header class="header">
   <div class="header__wrapper">
-    <button class="hamburger hamburger--activ e" type="button" aria-label="Open mobile menu" aria-pressed="false">
-      <span class="hamburger__line"></span>
+    <button onclick="document.querySelector('.hamburger').classList.toggle('hamburger--active')"
+      class="hamburger hamburger--activ e" type="button" aria-label="Open mobile menu" aria-pressed="false">
+      <span class="hamburger__top"></span>
+      <span class="hamburger__mid"></span>
+      <span class="hamburger__bot"></span>
     </button>
     <a class="header__logo" href="#">
-      <img src="../../img/svg/logo_site.svg" alt="Логотип" width="295" height="44">
+      <img src="./img/svg/logo_site.svg" alt="Логотип" width="295" height="44">
     </a>
-    <button class="btn__icon" type="button" aria-label="Show help contacts">
+    <button class="btn btn__icon" type="button" aria-label="Show help contacts">
       <svg viewBox="0 0 44 44" width="44" height="44">
         <use xlink:href="#icon_help"></use>
       </svg>
