@@ -1010,6 +1010,7 @@ button,
     background-color: #004685; }
 
 .bg {
+  margin-top: 68px;
   padding-bottom: 112px;
   background-color: #4888c1;
   background-image: url(../../img/bg/bg@1x.png);
@@ -1018,10 +1019,10 @@ button,
   background-position: center top; }
   @media (max-width: 799px) {
     .bg {
-      background-image: url(../../img/bg/bg_mob@1x.png);
       margin-top: 48px;
       padding-top: 40px;
-      padding-bottom: 30px; } }
+      padding-bottom: 30px;
+      background-image: url(../../img/bg/bg_mob@1x.png); } }
   .bg__wrapper {
     padding-top: 89px; }
     @media (max-width: 799px) {
@@ -1085,7 +1086,11 @@ button,
         display: block;
         fill: #004685; }
       .form__btn span {
-        display: none; } }
+        display: none; }
+      .form__btn:hover, .form__btn:focus {
+        background-color: rgba(255, 255, 255, 0); }
+        .form__btn:hover svg, .form__btn:focus svg {
+          fill: #569ddc; } }
   .form__input {
     width: 100%;
     padding: 20px 24px;
@@ -1155,6 +1160,7 @@ button,
         text-overflow: ellipsis; } }
 
 .features {
+  margin-bottom: 68px;
   padding-top: 60px; }
   @media (max-width: 799px) {
     .features {

@@ -1,4 +1,5 @@
 .bg {
+  margin-top: 68px;
   padding-bottom: 112px;
   background-color: $color-blue-bg;
   background-image: url(../../img/bg/bg@1x.png);
@@ -7,10 +8,10 @@
   background-position: center top;
 
   @include viewport--md {
-    background-image: url(../../img/bg/bg_mob@1x.png);
     margin-top: 48px;
     padding-top: 40px;
     padding-bottom: 30px;
+    background-image: url(../../img/bg/bg_mob@1x.png);
   }
 
   &__wrapper {
@@ -92,6 +93,15 @@
 
       span {
         display: none;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $color-transparent;
+
+        svg {
+          fill: $color-blue-hv;
+        }
       }
     }
   }
