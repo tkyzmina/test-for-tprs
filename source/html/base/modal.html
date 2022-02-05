@@ -1,4 +1,5 @@
-<div class="modal modal--preload modal--@@name @@if (context.responsive) { modal--responsive } @@if (context.fitContent) { modal--fit-content } @@if (context.noScale) { modal--no-scale } @@if (context.mod) { modal--@@mod }">
+<div
+  class="modal modal--preload modal--@@name @@if (context.responsive) { modal--responsive } @@if (context.fitContent) { modal--fit-content } @@if (context.noScale) { modal--no-scale } @@if (context.mod) { modal--@@mod }">
   <div class="modal__wrapper">
     <div class="modal__overlay"></div>
     <div class="modal__content">
@@ -6,7 +7,7 @@
       @@include("source/html/components/modal-@@name.html")
 
       <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
-        <svg width="15" height="15">
+        <svg width="20" height="20">
           <use xlink:href="#icon-close"></use>
         </svg>
       </button>
