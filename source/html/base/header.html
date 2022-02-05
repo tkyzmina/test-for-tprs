@@ -8,12 +8,20 @@
     <a class="header__logo" href="#">
       <img src="./img/svg/logo_site.svg" alt="Логотип" width="295" height="44">
     </a>
-    <button class="btn btn__icon" type="button" aria-label="Show help contacts">
-      <svg viewBox="0 0 44 44" width="44" height="44">
-        <use xlink:href="#icon_help"></use>
-      </svg>
-    </button>
+    <div class="header__dropdown dropdown">
+      <button class="btn btn--icon" type="button" aria-label="Show help contacts">
+        <svg viewBox="0 0 44 44" width="44" height="44">
+          <use xlink:href="#icon_help"></use>
+        </svg>
+      </button>
+      <div class="dropdown__content">
+        <p class="dropdown__text">Тел. поддержки</p>
+        <a class="dropdown__tel" href="tel:+88001234567">8 800 123-45-67</a>
+        <a class="dropdown__link" href="#">Написать письмо</a>
+      </div>
+    </div>
   </div>
+
   <nav class="header__nav">
     <ul class="header__list">
       <li class="header__item">

@@ -21,7 +21,7 @@
     background-color: $color-red;
   }
 
-  &__icon {
+  &--icon {
     @include reset-btn;
 
     @include viewport--md {
@@ -36,6 +36,11 @@
         fill: $color-blue-hv;
         stroke: $color-blue-hv;
       }
+    }
+
+    &:hover~.dropdown__content,
+    &:focus~.dropdown__content {
+      transform: scale(1);
     }
 
     &:active {
