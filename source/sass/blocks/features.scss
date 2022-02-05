@@ -1,6 +1,10 @@
 .features {
   padding-top: 60px;
 
+  @include viewport--md {
+    padding-top: 28px;
+  }
+
   &__title {
     @include h2;
 
@@ -13,6 +17,8 @@
     }
 
     @include viewport--md {
+      margin-bottom: 17px;
+
       span {
         &:first-of-type {
           display: none;
