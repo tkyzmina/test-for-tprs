@@ -1,7 +1,6 @@
 <header class="header">
   <div class="header__wrapper">
-    <button onclick="document.querySelector('.hamburger').classList.toggle('hamburger--active')"
-      class="hamburger hamburger--activ e" type="button" aria-label="Open mobile menu" aria-pressed="false">
+    <button class="hamburger" type="button" aria-label="Open mobile menu" aria-pressed="false">
       <span class="hamburger__top"></span>
       <span class="hamburger__mid"></span>
       <span class="hamburger__bot"></span>
@@ -14,24 +13,32 @@
         <use xlink:href="#icon_help"></use>
       </svg>
     </button>
-
-    <!-- <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if
-              (context.headerActiveLinkIndex !==0) { href="#" }>Страница 1</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if
-              (context.headerActiveLinkIndex !==1) { href="#" }>Страница 2</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if
-              (context.headerActiveLinkIndex !==2) { href="#" }>Страница 3</a>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
   </div>
+  <nav class="header__nav">
+    <ul class="header__list">
+      <li class="header__item">
+        <h3 class="header__list-title">ЛИЧНЫЙ КАБИНЕТ</h3>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#" data-modal="feedback">Вход в Личный кабинет</a>
+      </li>
+    </ul>
+    <ul class="header__list">
+      <li class="header__item">
+        <h3 class="header__list-title">КАК ЭТО РАБОТАЕТ</h3>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#">Условия использования сервиса</a>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#">Способы оплаты</a>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#">Часто задаваемые вопросы</a>
+      </li>
+      <li class="header__item">
+        <a class="header__link" href="#">Служба поддержки</a>
+      </li>
+    </ul>
+  </nav>
 </header>

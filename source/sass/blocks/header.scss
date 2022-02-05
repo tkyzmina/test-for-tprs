@@ -1,9 +1,15 @@
 .header {
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
+  width: 100%;
   min-height: 68px;
   padding: 0 24px;
   background-color: $color-default-white;
+  border-bottom: 1px solid #ccdae7;
+  z-index: 5;
+  overflow: hidden;
 
   @include viewport--md {
     min-height: 48px;
@@ -32,21 +38,80 @@
     }
   }
 
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+  &__nav {
+    position: fixed;
+    padding: 20px;
+    background-color: $color-default-white;
+    opacity: 0.95;
+    width: 22%;
+    min-width: 268px;
+    height: 100vh;
+    top: 68px;
+    transform: translateX(-120%);
+    z-index: 10;
+    transition: left $default-transition-settings, right $default-transition-settings, transform 0.3s linear;
 
-    list-style: none;
+    &--open {
+      transform: translateX(-24px);
+    }
 
-    li {
-      margin-right: 20px;
+    @include viewport--md {
+      top: 49px;
+      right: 0px;
+      transform-origin: 0% 0%;
+      transform: translateX(500%);
+
+      &--open {
+        transform: translateX(0);
+      }
     }
   }
 
-  .main-nav {
-    display: none;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 38px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0;
+    margin-bottom: 22px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .header__item:first-child {
+    margin-bottom: 0;
+  }
+
+  &__list-title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__link {
+    margin: 0;
+    margin-bottom: 22px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-blue;
+    border-bottom: 1px dotted $color-blue;
+    transition: color $default-transition-settings, border-bottom-color $default-transition-settings;
+
+    &:hover {
+      color: $color-blue-hv;
+      border-bottom-color: $color-blue-hv;
+    }
   }
 }
