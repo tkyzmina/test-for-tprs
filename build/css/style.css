@@ -1024,7 +1024,7 @@ button,
   margin-top: 68px;
   padding-bottom: 112px;
   background-color: #4888c1;
-  background-image: url(../../img/bg/bg@1x.png);
+  background-image: url(../img/bg/bg@1x.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover; }
@@ -1033,7 +1033,7 @@ button,
       margin-top: 48px;
       padding-top: 40px;
       padding-bottom: 30px;
-      background-image: url(../../img/bg/bg_mob@1x.png); } }
+      background-image: url(../img/bg/bg_mob@1x.png); } }
   .bg__wrapper {
     padding-top: 89px; }
     @media (max-width: 799px) {
