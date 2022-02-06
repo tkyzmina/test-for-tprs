@@ -1,16 +1,18 @@
 .bg {
   margin-top: 68px;
   padding-bottom: 112px;
+
   background-color: $color-blue-bg;
   background-image: url(../../img/bg/bg@1x.png);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center top;
+  background-size: cover;
 
   @include viewport--md {
     margin-top: 48px;
     padding-top: 40px;
     padding-bottom: 30px;
+
     background-image: url(../../img/bg/bg_mob@1x.png);
   }
 
@@ -19,13 +21,13 @@
 
     @include viewport--md {
       padding: 0;
-
     }
   }
 
   &__title {
     margin: 0;
     margin-bottom: 16px;
+
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
@@ -34,6 +36,7 @@
 
     @include viewport--md {
       margin-bottom: 21px;
+
       font-size: 20px;
       line-height: 26px;
       text-align: center;
@@ -68,27 +71,26 @@
 
     @include viewport--md {
       position: relative;
+
       flex-grow: 0;
       width: 100%;
       margin-right: 0;
-
     }
   }
 
   &__btn {
-    svg {
-      display: none;
-    }
-
     @include viewport--md {
       position: absolute;
       right: 20px;
+
       padding: 12px;
+
       background-color: $color-transparent;
       outline: none;
 
       svg {
         display: block;
+
         fill: $color-blue;
       }
 
@@ -105,15 +107,33 @@
         }
       }
     }
+    svg {
+      display: none;
+    }
   }
 
   &__input {
     width: 100%;
     padding: 20px 24px;
+
+    background-color: $color-default-white;
     border: none;
     border-radius: 8px;
-    background-color: $color-default-white;
     outline: none;
+
+    @include viewport--md {
+      position: relative;
+
+      width: 100%;
+      padding: 13px 44px 13px 12px;
+      overflow: hidden;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      border: 1px solid $color-grey;
+      border-radius: 4px;
+    }
 
     &::placeholder {
       font-style: normal;
@@ -121,24 +141,14 @@
       font-size: 16px;
       line-height: 22px;
       color: $color-grey;
+
       transition: color $default-transition-settings;
     }
 
     &:focus {
       &::placeholder {
-        color: lighten($color-grey, $amount: 20%)
+        color: lighten($color-grey, $amount: 20%);
       }
-    }
-
-    @include viewport--md {
-      width: 100%;
-      position: relative;
-      padding: 13px 44px 13px 12px;
-      border: 1px solid $color-grey;
-      border-radius: 4px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
     }
   }
 }

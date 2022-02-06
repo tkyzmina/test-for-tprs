@@ -14,11 +14,12 @@
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
-  pointer-events: none;
 
   transition: opacity $modal-transition-settings,
-    transform $modal-transition-settings,
-    visibility $modal-transition-settings;
+  transform $modal-transition-settings,
+  visibility $modal-transition-settings;
+
+  pointer-events: none;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -38,11 +39,9 @@
     min-height: 100%;
     padding: 60px 40px;
 
-
     @include viewport--md {
       padding: 0;
     }
-
   }
 
   &__overlay {
@@ -115,15 +114,17 @@
     transform: scale(1);
     visibility: visible;
     opacity: 1;
+
     pointer-events: auto;
   }
 }
 
 .login {
   &__title {
+    max-width: 90%;
     margin: 0;
     margin-bottom: 32px;
-    max-width: 90%;
+
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -138,9 +139,10 @@
     width: 100%;
     margin-bottom: 16px;
     padding: 19px 24px;
+
     background-color: $color-default-white;
-    border-radius: 8px;
     border: 2px solid $color-grey;
+    border-radius: 8px;
     outline: none;
 
     &:last-of-type {
@@ -151,13 +153,14 @@
       font-size: 16px;
       line-height: 22px;
       color: $color-grey;
+
       transition: color $default-transition-settings;
     }
 
     &:hover,
     &:focus {
       &::placeholder {
-        color: lighten($color-grey, $amount: 20%)
+        color: lighten($color-grey, $amount: 20%);
       }
     }
   }
@@ -171,11 +174,13 @@
   &__link {
     margin: 0;
     margin-bottom: 12px;
+
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: $color-blue;
+
     border-bottom: 1px dotted $color-blue;
 
     &:last-of-type {
@@ -184,7 +189,7 @@
   }
 
   .btn {
-    width: 100%;
     justify-content: center;
+    width: 100%;
   }
 }

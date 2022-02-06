@@ -1,16 +1,19 @@
 .btn {
   display: flex;
   padding: 14px 32px 13px;
+
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: $color-default-white;
+
+  background-color: $color-red;
   border: none;
   border-radius: 8px;
-  background-color: $color-red;
-  transition: background-color $default-transition-settings;
   cursor: pointer;
+
+  transition: background-color $default-transition-settings;
 
   &:hover,
   &:focus {
@@ -23,7 +26,6 @@
 
   &--icon {
     @include reset-btn;
-
     @include viewport--md {
       display: none;
     }
@@ -38,8 +40,8 @@
       }
     }
 
-    &:hover~.dropdown__content,
-    &:focus~.dropdown__content {
+    &:hover ~ .dropdown__content,
+    &:focus ~ .dropdown__content {
       transform: scale(1);
     }
 
@@ -53,9 +55,10 @@
     }
 
     svg {
+      transition: fill $default-transition-settings, stroke $default-transition-settings;
+
       fill: $color-blue;
       stroke: $color-blue;
-      transition: fill $default-transition-settings, stroke $default-transition-settings;
     }
   }
 }
@@ -63,9 +66,11 @@
 %hamburger-line {
   content: "";
   position: absolute;
+
   display: inline-block;
   width: 30px;
   height: 3px;
+
   background-color: $color-blue;
 
   @include viewport--md {
@@ -74,19 +79,23 @@
 }
 
 .hamburger {
-  @include reset-btn;
   position: relative;
+
   width: 48px;
   height: 48px;
   padding: 13px 9px 12px;
 
+  @include reset-btn;
+
   &__top {
-    @extend %hamburger-line;
     top: 13px;
     left: 9px;
-    transform-origin: 0% 50%;
+
+    transform-origin: 0 50%;
+
     transition: transform 0.5s ease, opacity $default-transition-settings, background-color $default-transition-settings;
 
+    @extend %hamburger-line;
     @include viewport--md {
       top: 16px;
       left: 12px;
@@ -94,12 +103,14 @@
   }
 
   &__mid {
-    @extend %hamburger-line;
     top: 23px;
     left: 9px;
+
     transform: scaleX(100%);
+
     transition: transform 0.5s ease, opacity $default-transition-settings, background-color $default-transition-settings;
 
+    @extend %hamburger-line;
     @include viewport--md {
       top: 23px;
       left: 12px;
@@ -107,16 +118,19 @@
   }
 
   &__bot {
-    @extend %hamburger-line;
     top: 33px;
     left: 9px;
-    transform-origin: 2px 0px;
+
+    transform-origin: 2px 0;
+
     transition: transform 0.5s ease, opacity $default-transition-settings, background-color $default-transition-settings;
 
+    @extend %hamburger-line;
     @include viewport--md {
-      transform-origin: 3px 1px;
       top: 30px;
       left: 12px;
+
+      transform-origin: 3px 1px;
     }
   }
 
@@ -127,8 +141,8 @@
 
     .hamburger__mid {
       transform: scaleX(0);
-      opacity: 0;
       transform: rotate(0deg) scale(0.2, 0.2);
+      opacity: 0;
     }
 
     .hamburger__bot {
@@ -137,7 +151,6 @@
   }
 
   &:hover {
-
     .hamburger__top,
     .hamburger__mid,
     .hamburger__bot {
@@ -146,7 +159,6 @@
   }
 
   &:active {
-
     .hamburger__top,
     .hamburger__mid,
     .hamburger__bot {

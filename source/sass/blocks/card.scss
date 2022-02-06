@@ -1,23 +1,24 @@
 .card {
   border-bottom: 1px solid $color-light-blue;
 
-  &:last-of-type {
-    border-bottom: none;
-  }
-
   @include viewport--md {
     &:last-of-type {
       border-bottom: 1px solid $color-light-blue;
     }
   }
 
+  &:last-of-type {
+    border-bottom: none;
+  }
+
   &__wrapper {
     display: flex;
-    gap: 40px;
     padding-top: 60px;
     padding-bottom: 58px;
+
     transition: max-height $default-transition-settings;
 
+    gap: 40px;
     @include viewport--md {
       max-height: 0;
       padding-top: 0;
@@ -32,7 +33,6 @@
       padding-top: 12px;
       padding-bottom: 20px;
     }
-
   }
 
   &--left {
@@ -48,6 +48,7 @@
   &__title {
     margin: 0;
     margin-bottom: 22px;
+
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
@@ -63,8 +64,9 @@
     margin-bottom: 12px;
 
     &:last-of-type {
-      margin-bottom: 0;
       position: relative;
+
+      margin-bottom: 0;
     }
 
     // @include viewport--md {
@@ -77,8 +79,9 @@
   &__highlighted {
     display: flex;
     padding-top: 23px;
-    text-transform: uppercase;
+
     color: $color-red;
+    text-transform: uppercase;
 
     @include viewport--md {
       padding-top: 10px;
@@ -99,29 +102,32 @@
     flex-shrink: 0;
     width: 320px;
 
+    @include viewport--md {
+      display: none;
+    }
+
     @media (max-width: 1200px) {
       flex-shrink: 1;
       min-width: 200px;
     }
-
-    @include viewport--md {
-      display: none;
-    }
   }
 
   &__img {
-    width: 100%;
     position: relative;
+
+    width: 100%;
     padding-bottom: percentage(320/320);
 
     img {
       position: absolute;
-      left: 0;
       top: 0;
       right: 0;
       bottom: 0;
+      left: 0;
+
       width: 100%;
       height: 100%;
+
       object-fit: cover;
     }
   }
@@ -132,23 +138,27 @@
     @include viewport--md {
       display: flex;
       align-items: center;
-      gap: 20px;
       width: 100%;
       padding: 6px 14px;
       padding-right: 16px;
+
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
       line-height: 24px;
-      border: none;
-      background-color: $color-default-white;
       color: $color-blue;
+
+      background-color: $color-default-white;
+      border: none;
       cursor: pointer;
+
+      gap: 20px;
 
       &:hover,
       &:focus {
         span {
           color: $color-blue-hv;
+
           border-color: $color-blue-hv;
         }
 
@@ -160,6 +170,7 @@
       &:active {
         span {
           color: $color-blue;
+
           border-color: $color-blue;
         }
 
@@ -169,15 +180,19 @@
       }
 
       span {
-        border-bottom: 1px dashed $color-blue;
-        transition: color $default-transition-settings, border-color $default-transition-settings;
         text-align: left;
+
+        border-bottom: 1px dashed $color-blue;
+
+        transition: color $default-transition-settings, border-color $default-transition-settings;
       }
 
       svg {
         flex-shrink: 0;
-        fill: $color-blue;
+
         transition: fill $default-transition-settings, transform $default-transition-settings;
+
+        fill: $color-blue;
 
         &:last-of-type {
           margin-left: auto;
@@ -186,7 +201,7 @@
     }
   }
 
-  .card__accordion.active>.accordion__arrow {
+  .card__accordion.active > .accordion__arrow {
     transform: rotate(180deg);
   }
 }

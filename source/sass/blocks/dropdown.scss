@@ -3,27 +3,32 @@
 
   &__content {
     position: fixed;
-    display: flex;
-    flex-direction: column;
     top: 58px;
     right: 30px;
-    padding: 22px 16px;
-    background-color: $color-default-white;
-    box-shadow: 0px 3px 12px $color-grey;
-    text-align: center;
     z-index: 10;
-    transform-origin: top right;
+
+    display: flex;
+    flex-direction: column;
+    padding: 22px 16px;
+
+    text-align: center;
+
+    background-color: $color-default-white;
+    box-shadow: 0 3px 12px $color-grey;
     transform: scale(0);
+    transform-origin: top right;
+
     transition: transform $default-transition-settings;
 
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
       top: -27px;
-      right: 0px;
+      right: 0;
+      z-index: 9;
+
       border: 15px solid transparent;
       border-bottom: 15px solid $color-default-white;
-      z-index: 9;
     }
   }
 
@@ -33,6 +38,7 @@
 
   &__tel {
     margin-bottom: 20px;
+
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -48,6 +54,7 @@
     line-height: 22px;
     color: $color-blue;
     text-decoration: underline;
+
     transition: color $default-transition-settings;
 
     &:hover {
