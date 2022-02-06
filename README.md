@@ -7,6 +7,7 @@
 - BEM, adaptive with media queries
 - Custom modals and custom accordion
 - CSS animation
+- images WebP
 
 ## [Гайд по работе со сборкой](/GUIDE.md) 📕
 
