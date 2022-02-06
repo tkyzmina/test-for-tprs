@@ -24,6 +24,10 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    @include viewport--md {
+      justify-content: flex-start;
+    }
   }
 
   &__logo {
@@ -37,6 +41,7 @@
   .hamburger {
     @include viewport--md {
       order: 2;
+      margin-left: auto;
     }
   }
 
@@ -56,6 +61,10 @@
 
     transition: left $default-transition-settings, right $default-transition-settings, transform 0.3s linear;
 
+    &--open {
+      transform: translateX(-24px);
+    }
+
     @include viewport--md {
       top: 49px;
       right: 0;
@@ -66,10 +75,6 @@
       &--open {
         transform: translateX(0);
       }
-    }
-
-    &--open {
-      transform: translateX(-24px);
     }
   }
 

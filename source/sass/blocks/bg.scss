@@ -79,6 +79,10 @@
   }
 
   &__btn {
+    svg {
+      display: none;
+    }
+
     @include viewport--md {
       position: absolute;
       right: 20px;
@@ -106,9 +110,6 @@
           fill: $color-blue-hv;
         }
       }
-    }
-    svg {
-      display: none;
     }
   }
 

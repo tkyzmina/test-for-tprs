@@ -3,11 +3,22 @@
   padding-top: 60px;
 
   @include viewport--md {
+    margin-bottom: 2px;
     padding-top: 28px;
   }
 
   &__title {
     @include h2;
+
+    span {
+      &:last-of-type {
+        display: none;
+
+        font-size: 20px;
+        line-height: 27px;
+      }
+    }
+
     @include viewport--md {
       margin-bottom: 17px;
 
@@ -19,15 +30,6 @@
         &:last-of-type {
           display: block;
         }
-      }
-    }
-
-    span {
-      &:last-of-type {
-        display: none;
-
-        font-size: 20px;
-        line-height: 27px;
       }
     }
   }

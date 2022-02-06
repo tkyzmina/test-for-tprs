@@ -555,6 +555,11 @@ button,
         -ms-flex-align: center;
             align-items: center;
     width: 100%; }
+    @media (max-width: 799px) {
+      .header__wrapper {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; } }
   @media (max-width: 799px) {
     .header__logo {
       -webkit-box-ordinal-group: 2;
@@ -566,7 +571,8 @@ button,
     .header .hamburger {
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
-              order: 2; } }
+              order: 2;
+      margin-left: auto; } }
   .header__nav {
     position: fixed;
     top: 68px;
@@ -583,6 +589,9 @@ button,
     transition: left 0.3s ease, right 0.3s ease, -webkit-transform 0.3s linear;
     transition: left 0.3s ease, right 0.3s ease, transform 0.3s linear;
     transition: left 0.3s ease, right 0.3s ease, transform 0.3s linear, -webkit-transform 0.3s linear; }
+    .header__nav--open {
+      -webkit-transform: translateX(-24px);
+              transform: translateX(-24px); }
     @media (max-width: 799px) {
       .header__nav {
         top: 49px;
@@ -594,9 +603,6 @@ button,
         .header__nav--open {
           -webkit-transform: translateX(0);
                   transform: translateX(0); } }
-    .header__nav--open {
-      -webkit-transform: translateX(-24px);
-              transform: translateX(-24px); }
   .header__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1079,6 +1085,8 @@ button,
                 flex-grow: 0;
         width: 100%;
         margin-right: 0; } }
+  .form__btn svg {
+    display: none; }
   @media (max-width: 799px) {
     .form__btn {
       position: absolute;
@@ -1095,8 +1103,6 @@ button,
         background-color: rgba(255, 255, 255, 0); }
         .form__btn:hover svg, .form__btn:focus svg {
           fill: #569ddc; } }
-  .form__btn svg {
-    display: none; }
   .form__input {
     width: 100%;
     padding: 20px 24px;
@@ -1170,6 +1176,7 @@ button,
   padding-top: 60px; }
   @media (max-width: 799px) {
     .features {
+      margin-bottom: 2px;
       padding-top: 28px; } }
   .features__title {
     margin: 0;
@@ -1183,6 +1190,10 @@ button,
       .features__title {
         font-size: 20px;
         line-height: 27px; } }
+    .features__title span:last-of-type {
+      display: none;
+      font-size: 20px;
+      line-height: 27px; }
     @media (max-width: 799px) {
       .features__title {
         margin-bottom: 17px; }
@@ -1190,10 +1201,6 @@ button,
           display: none; }
         .features__title span:last-of-type {
           display: block; } }
-    .features__title span:last-of-type {
-      display: none;
-      font-size: 20px;
-      line-height: 27px; }
   .features__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1380,10 +1387,9 @@ button,
   margin-bottom: 50px; }
   @media (max-width: 799px) {
     .partners {
-      margin-bottom: 43px;
+      margin-bottom: 44px;
       padding-top: 25px; } }
   .partners__title {
-    margin-bottom: 36px;
     margin: 0;
     margin-bottom: 13px;
     font-style: normal;
@@ -1395,19 +1401,16 @@ button,
       .partners__title {
         font-size: 20px;
         line-height: 27px; } }
-    @media (max-width: 799px) {
-      .partners__title {
-        margin-bottom: 16px; } }
   .partners__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    row-gap: 32px;
     margin: 0;
     padding: 0;
-    list-style: none;
-    row-gap: 32px; }
+    list-style: none; }
     @media (max-width: 799px) {
       .partners__list {
         gap: 16px;
@@ -1416,6 +1419,12 @@ button,
     width: calc(100% / 6);
     min-width: 148px;
     padding: 10px; }
+    @media (max-width: 1200px) {
+      .partners__item {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: calc(100% / 3); } }
     @media (max-width: 799px) {
       .partners__item {
         width: calc(100% / 2 - 8px);
@@ -1423,12 +1432,6 @@ button,
     @media (max-width: 359px) {
       .partners__item {
         width: 100%; } }
-    @media (max-width: 1200px) {
-      .partners__item {
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        width: calc(100% / 3); } }
   .partners__logo-wrapper {
     width: 115px;
     margin: 0 auto;
@@ -1456,6 +1459,12 @@ button,
     font-size: 12px;
     line-height: 16px;
     text-align: center; }
+
+.partners__title {
+  margin-bottom: 36px; }
+  @media (max-width: 799px) {
+    .partners__title {
+      margin-bottom: 16px; } }
 
 .dropdown {
   position: relative; }
