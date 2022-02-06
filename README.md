@@ -1,4 +1,12 @@
-# [Опубликовано ТУТ](https://tkyzmina.github.io/test-for-tprs/build/)
+# [Check it here](https://tkyzmina.github.io/test-for-tprs/build/)
+
+### Used stack :
+
+- Gulp, Gulp include
+- Sass
+- BEM, adaptive with media queries
+- Custom modals and custom accordion
+- CSS animation
 
 ## [Гайд по работе со сборкой](/GUIDE.md) 📕
 
